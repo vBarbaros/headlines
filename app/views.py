@@ -1,4 +1,5 @@
 import feedparser
+from flask import render_template
 from app import app
 
 RSS_FEEDS = {
@@ -22,18 +23,8 @@ def cnn():
 @app.route("/<publication>")
 def get_news(publication="bbc"):
     feed = feedparser.parse(RSS_FEEDS[publication])
-    first_article = feed['entries'][0]
-    html_template = """<html>
-                            <body>
-                                <h1> Headlines </h1>
-                                <b>{0}</b> <br/>
-                                <i>{1}</i> <br/>
-                                <p>{2}</p> <br/>
-                            </body>
-                        </html>
-                    """
-    
-    return html_template.format(first_article.get("title"), 
-                                first_article.get("published"), 
-                                first_article.get("summary")
-                                )
+    # first_article = feed['entries'][0]
+    # return render_template('home.html', article=first_article)
+    return render_template('home.html', articles=feed['entries'])
+
+
