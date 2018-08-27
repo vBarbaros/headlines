@@ -1,0 +1,14 @@
+html{
+    font-family: "Helvetica";
+    background: white;
+}
+
+body{
+    background: lightgrey;
+    max-width: 900px;
+    margin: 100 auto;
+}
+
+#header{
+    background: lightsteelblue;
+}
