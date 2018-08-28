@@ -13,7 +13,9 @@ RSS_FEEDS = {
     'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
     'cnn': 'http://rss.cnn.com/rss/edition.rss',
     'fox': 'http://feeds.foxnews.com/foxnews/latest',
-    'iol': 'http://www.iol.co.za/cmlink/1.640'
+    'iol': 'http://www.iol.co.za/cmlink/1.640',
+    'reuters': 'http://feeds.reuters.com/news/wealth',
+    'marketwatch-top stories': 'http://www.marketwatch.com/rss/topstories'
     }
 
 DEFAULTS = {
@@ -59,6 +61,9 @@ def get_news(query):
     else:
         publication = query.lower()
     feed = feedparser.parse(RSS_FEEDS[publication])
+    for i in feed['entries']:
+        if i.summary.find('<'):
+            i.summary = i.summary[0: i.summary.find('<')]
     return feed['entries']
 
 
