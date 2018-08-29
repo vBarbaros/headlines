@@ -62,8 +62,11 @@ def get_news(query):
         publication = query.lower()
     feed = feedparser.parse(RSS_FEEDS[publication])
     for i in feed['entries']:
-        if i.summary.find('<'):
-            i.summary = i.summary[0: i.summary.find('<')]
+        try:    
+            if i.summary and i.summary.find('<'):
+                i.summary = i.summary[0: i.summary.find('<')]
+        except AttributeError:
+            pass
     return feed['entries']
 
 
