@@ -50,7 +50,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## Credits
 
-- [Flask: Building Python Web ServicesGareth Dwyer, Shalabh Aggarwal, Jack Stouffer](https://www.packtpub.com/web-development/flask-building-python-web-services) While using the tutorials described in this book, I made the following imporvement:
+- The Book [Flask: Building Python Web ServicesGareth Dwyer, Shalabh Aggarwal, Jack Stouffer](https://www.packtpub.com/web-development/flask-building-python-web-services) While using the tutorials described in this book, I made the following improvement:
 	1) adapted the overall architecture of the current Flask webapp to a more reusable one;
 	2) refactored apps components and prepared the necesary files to make it deployable to Heroku in a matter of seconds;
 
