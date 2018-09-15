@@ -13,7 +13,7 @@
 
 - [Heroku](https://www.heroku.com/about) - Heroku is a container-based cloud Platform as a Service (PaaS).
 
-- Check the [headlines-production](https://headlines-vb.herokuapp.com/)instance;
+- Check the [headlines-production](https://headlines-vb.herokuapp.com/) instance;
 
 - !!! No split of this project in dev, staging, production since the limit for free web apps, hosted on Heroku (for free), is very small [hey, give me some money and I'll apply the full dev-cycle ;) ]
 
@@ -22,7 +22,7 @@
 
 ![Home Page](headlines-screenshots/headlines-home.png)
 
-### Select Publsher Option
+### Select Publisher Option
 
 ![Select Publisher Dropdown Menu](headlines-screenshots/headlines-publisher-menu.png)
 
@@ -54,7 +54,8 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 - The Book [Flask: Building Python Web ServicesGareth Dwyer, Shalabh Aggarwal, Jack Stouffer](https://www.packtpub.com/web-development/flask-building-python-web-services) While using the tutorials described in this book, I made the following improvement:
 	1) adapted the overall architecture of the current Flask webapp to a more reusable one;
-	2) refactored apps components and prepared the necesary files to make it deployable to Heroku in a matter of seconds;
+	2) handled some potential errors, publisher-dependent (not all of them provide summaries in the feeds, etc...);
+	2) refactored the app's components and prepared the necesary files to make it deployable to Heroku in a matter of seconds;
 
 ## To-do
 - Add Unit Tests;
