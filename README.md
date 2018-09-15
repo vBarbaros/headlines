@@ -13,7 +13,9 @@
 
 - [Heroku](https://www.heroku.com/about) - Heroku is a container-based cloud Platform as a Service (PaaS).
 
-- Check the [bookshelf-production ](https://headlines-vb.herokuapp.com/)instance;
+- Check the [headlines-production](https://headlines-vb.herokuapp.com/)instance;
+
+- !!! No split of this project in dev, staging, production since the limit for free web apps, hosted on Heroku (for free), is very small [hey, give me some money and I'll apply the full dev-cycle ;) ]
 
 
 ### Landing Page
